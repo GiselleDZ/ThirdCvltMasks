@@ -480,22 +480,26 @@
 
 html {
   font-size: 62.5%; }
-  @media (min-width: 112.5em) {
+  @media only screen and (min-width: 112.5em) {
     html {
       font-size: 75%; } }
-  @media (max-width: 75em) {
+  @media only screen and (max-width: 75em) {
     html {
       font-size: 56.25%; } }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     html {
       font-size: 50%; } }
 
 body {
   box-sizing: border-box;
   padding: 3rem; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     body {
       padding: 0; } }
+
+::selection {
+  background-color: #000000;
+  color: #FFFFFF; }
 
 body {
   font-family: "Lato", sans-serif;
@@ -515,15 +519,15 @@ body {
     letter-spacing: 2.2rem;
     animation: moveInLeft .5s;
     animation-timing-function: ease-in; }
-    @media (max-width: 75em) {
+    @media only screen and (max-width: 75em) {
       .heading-primary--main {
         letter-spacing: 1.5rem;
         font-size: 3.6rem; } }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .heading-primary--main {
         letter-spacing: 1rem;
         font-size: 3.3rem; } }
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .heading-primary--main {
         letter-spacing: .5rem;
         font-size: 3rem; } }
@@ -535,15 +539,15 @@ body {
     letter-spacing: 2.5rem;
     animation: moveInRight .5s;
     animation-timing-function: ease-in; }
-    @media (max-width: 75em) {
+    @media only screen and (max-width: 75em) {
       .heading-primary--sub {
         letter-spacing: 1.5rem;
         font-size: 2rem; } }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .heading-primary--sub {
         letter-spacing: 1.5rem;
         font-size: 3rem; } }
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .heading-primary--sub {
         letter-spacing: 1rem;
         font-size: 2rem; } }
@@ -582,7 +586,7 @@ body {
   font-weight: 600;
   color: #686868;
   letter-spacing: .2rem; }
-  @media (max-width: 75em) {
+  @media only screen and (max-width: 75em) {
     .heading-tertiary {
       font-size: 1.3rem; } }
   .heading-tertiary--light {
@@ -594,7 +598,7 @@ body {
   text-transform: uppercase;
   font-size: 1.3rem;
   font-weight: 400; }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .heading-quaternary {
       font-size: 1.4rem;
       letter-spacing: .1rem; } }
@@ -606,18 +610,21 @@ body {
   margin-bottom: 3rem;
   letter-spacing: .05rem;
   font-weight: 300; }
-  @media (max-width: 75em) {
+  @media only screen and (max-width: 75em) {
     .paragraph {
       font-size: 1.4rem; } }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .paragraph {
       font-size: 1.4rem; } }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .paragraph {
       font-size: 1.6rem; } }
 
 .u-center-text {
   text-align: center; }
+
+.u-text-color-white {
+  color: #D3D3D3; }
 
 .u-center-content {
   margin: 0 auto; }
@@ -627,13 +634,13 @@ body {
 
 .u-margin-bottom-big {
   margin-bottom: 8rem; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .u-margin-bottom-big {
       margin-bottom: 4rem; } }
 
 .u-margin-bottom-medium {
   margin-bottom: 4rem; }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .u-margin-bottom-medium {
       margin-bottom: 2rem; } }
 
@@ -645,13 +652,13 @@ body {
 
 .u-margin-top-big {
   margin-top: 8rem; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .u-margin-top-big {
       margin-top: 2rem; } }
 
 .u-margin-top-medium-large {
   margin-top: 6rem; }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .u-margin-top-medium-large {
       margin-top: 2rem; } }
 
@@ -675,7 +682,7 @@ body {
 
 .u-margin-left-bigger {
   margin-left: 11rem; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .u-margin-left-bigger {
       margin-left: 5rem; } }
 
@@ -784,13 +791,23 @@ body {
   box-shadow: 0 .5rem 2rem #00000038;
   transform: translateY(-1px); }
 
+.btn-text--anchor {
+  color: #D3D3D3;
+  background-color: transparent;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 1rem; }
+  .btn-text--anchor:hover {
+    color: #181818;
+    background-color: transparent; }
+
 .composition {
   position: relative; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .composition {
       margin-top: 5rem;
       margin-bottom: 5rem; } }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .composition {
       margin-left: .5rem;
       margin-top: 2rem; } }
@@ -800,7 +817,7 @@ body {
     position: absolute;
     border-width: 4rem;
     transition: transform .5s; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .composition__photo {
         width: 33.3%;
         float: left;
@@ -808,7 +825,7 @@ body {
     .composition__photo--p1 {
       left: -2%;
       top: -2rem; }
-      @media (max-width: 56.25em) {
+      @media only screen and (max-width: 56.25em) {
         .composition__photo--p1 {
           left: 0;
           top: 0;
@@ -816,7 +833,7 @@ body {
     .composition__photo--p2 {
       left: 40%;
       top: 6rem; }
-      @media (max-width: 56.25em) {
+      @media only screen and (max-width: 56.25em) {
         .composition__photo--p2 {
           left: 0;
           top: 0;
@@ -824,7 +841,7 @@ body {
     .composition__photo--p3 {
       left: 10%;
       top: 16rem; }
-      @media (max-width: 56.25em) {
+      @media only screen and (max-width: 56.25em) {
         .composition__photo--p3 {
           left: 0;
           top: 0;
@@ -848,11 +865,11 @@ body {
   border-radius: 0.5rem;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
   transition: transform .5s; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .feature-box {
       height: 26rem;
       padding: 6rem; } }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .feature-box {
       width: 80%;
       height: 28rem;
@@ -875,11 +892,11 @@ body {
   -moz-perspective: 150rem;
   position: relative;
   height: 62rem; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em), only screen and (hover: none) {
     .card {
       width: 45%;
       margin: 0 auto; } }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .card {
       width: 80%; } }
   .card__side {
@@ -986,15 +1003,15 @@ body {
   color: #D3D3D3; }
   .story > * {
     transform: skewX(12deg); }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .story > * {
         transform: skewX(0); } }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .story {
       width: 100%;
       padding: 4rem;
       padding-left: 7rem; } }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .story {
       transform: skewX(0);
       width: 80%;
@@ -1008,7 +1025,7 @@ body {
     transform: translateX(-3rem) skewX(12deg);
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
     position: relative; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .story__shape {
         transform: skewX(0) translate(0);
         float: none;
@@ -1022,7 +1039,7 @@ body {
     border: 1rem solid #FFFFFF; }
   .story__text {
     transform: skewX(12deg); }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .story__text {
         transform: skewX(0); } }
   .story__caption {
@@ -1060,7 +1077,7 @@ body {
     height: 100%;
     object-fit: cover; }
 
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .form {
     width: 100%; } }
 
@@ -1080,7 +1097,7 @@ body {
   border-bottom: 2px solid transparent;
   transition: all .5s;
   outline: none; }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .form__input {
       width: 100%; } }
   .form__input::-webkit-input-placeholder {
@@ -1182,20 +1199,20 @@ body {
     transform: translate(-50%, -50%);
     transform: translate(-50%, -50%) scale(0.5);
     transition: all .4s .2s; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .popup__content {
         width: 100%; } }
   .popup__left {
     width: 33.33333333%;
     display: table-cell; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .popup__left {
         width: 100%;
         display: inline-block; } }
     .popup__left--img {
       display: block;
       width: 100%; }
-      @media (max-width: 56.25em) {
+      @media only screen and (max-width: 56.25em) {
         .popup__left--img {
           display: inline-block;
           width: 50%; } }
@@ -1205,7 +1222,7 @@ body {
     vertical-align: middle;
     padding: 3rem 5rem;
     position: relative; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .popup__right {
         display: inline-block;
         width: 100%; } }
@@ -1218,7 +1235,7 @@ body {
     -moz-hyphens: auto;
     -ms-hyphens: auto;
     -webkit-hyphens: auto; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .popup__text {
         column-count: 1;
         column-gap: 0;
@@ -1240,7 +1257,7 @@ body {
     font-weight: 300;
     line-height: 1;
     transition: all .5s; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .popup__close, .popup__close:link, .popup__close:visited {
         top: -100%; } }
   .popup__close:hover {
@@ -1253,23 +1270,23 @@ body {
     content: "";
     clear: both;
     display: table; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .row {
       max-width: 90rem; } }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .row:not(:last-child) {
         margin-bottom: 6rem !important; } }
   .row [class^="col-"] {
     float: left; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 6rem; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .row [class^="col-"] {
         width: 100% !important;
         margin-bottom: 6rem; } }
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .row [class^="col-"] {
         width: 100% !important;
         margin-bottom: 6rem; } }
@@ -1293,13 +1310,13 @@ body {
   position: relative;
   clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 90%);
   background-image: linear-gradient(to right bottom, #000000af, #222121b4), url(../thirdcvlt-imgs/hero-xsml.jpg); }
-  @media (min-resolution: 192dpi) and (min-width: 37.5em) {
+  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em) {
     .header {
       background-image: linear-gradient(to right bottom, #000000af, #222121b4), url(../thirdcvlt-imgs/hero-small.jpg); } }
-  @media (min-width: 75em) {
+  @media only screen and (min-width: 75em) {
     .header {
       background-image: linear-gradient(to right bottom, #000000af, #222121b4), url(../thirdcvlt-imgs/hero.jpg); } }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .header {
       clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 90%); } }
   .header__logo-box {
@@ -1339,7 +1356,7 @@ body {
     display: block;
     width: 70%;
     margin: 0 auto; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .footer__line-nav {
         width: 30%; } }
   .footer__list {
@@ -1351,12 +1368,12 @@ body {
     backface-visibility: hidden;
     -webkit-font-smoothing: subpixel-antialiased;
     transition: all .5s; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .footer__item {
         display: block; } }
     .footer__item:not(:last-child) {
       margin-right: 6rem; }
-      @media (max-width: 56.25em) {
+      @media only screen and (max-width: 56.25em) {
         .footer__item:not(:last-child) {
           margin-right: 0; } }
     .footer__item:hover {
@@ -1380,7 +1397,7 @@ body {
     margin-top: 12rem;
     font-size: 1.2rem;
     color: #C0C0C0; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .footer__copyright {
         margin-top: 6rem; } }
 
@@ -1399,7 +1416,7 @@ body {
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.25);
   text-align: center;
   cursor: pointer; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .navigation__button {
       top: 2.5rem;
       right: 2.5rem; } }
@@ -1414,7 +1431,7 @@ body {
   background-image: radial-gradient(#000000, #303030);
   z-index: 1000;
   transition: transform 0.8s cubic-bezier(0.33, 1, 0.68, 1); }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .navigation__background {
       top: 2.8rem;
       right: 2.8rem; } }
@@ -1511,11 +1528,11 @@ body {
   padding: 30rem 0;
   margin-top: -25vh;
   margin-bottom: 11rem; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .section-about {
       padding: 20rem 0;
       margin-bottom: 10rem; } }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .section-about {
       padding: 20rem 4rem;
       margin-bottom: 5rem; } }
@@ -1526,10 +1543,10 @@ body {
   transform: skewY(-7deg);
   margin-top: -20rem;
   background-image: linear-gradient(to right bottom, #000000af, #222121b4), url(../thirdcvlt-imgs/1589417486725-692.jpg); }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .section-features {
       padding: 15rem 0 7rem 0; } }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .section-features {
       padding: 10rem 0 5rem 0; } }
   .section-features > * {
@@ -1540,7 +1557,7 @@ body {
   padding: 30rem 0 20rem 0;
   margin-top: -10rem;
   text-align: center; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .section-masks {
       padding: 20rem 0 10rem 0; } }
 
@@ -1548,7 +1565,7 @@ body {
   padding: 15rem 0;
   position: relative;
   background-color: rgba(24, 24, 24, 0.8); }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .section-stories {
       padding: 10rem 0; } }
 
@@ -1556,7 +1573,7 @@ body {
   padding: 15rem 0;
   background-size: cover;
   background-image: linear-gradient(to right bottom, #242424e7, #0f0f0fea), url(../thirdcvlt-imgs/many-mask-straps.jpg); }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .section-wholesale {
       padding: 5rem 0; } }
 
@@ -1565,7 +1582,7 @@ body {
   background-image: linear-gradient(105deg, rgba(80, 80, 80, 0.9) 0%, rgba(48, 48, 48, 0.8) 50%, rgba(48, 48, 48, 0.3) 50.2%), url(../thirdcvlt-imgs/mask-with-dustbag.jpg);
   border-radius: 0.5rem;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2); }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .inquiry {
       background-image: linear-gradient(to right bottom, #000000af, #222121b4), url(../thirdcvlt-imgs/mask-with-dustbag.jpg);
       width: 80%;
@@ -1573,7 +1590,7 @@ body {
   .inquiry__form {
     width: 50%;
     padding: 6rem; }
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .inquiry__form {
         width: 100%;
         padding: 4rem; } }

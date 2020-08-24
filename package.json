@@ -6,12 +6,14 @@
   "scripts": {
     "watch:sass": "node-sass sass/main.scss css/style.css -w",
     "devserver": "live-server",
-    "start": "npm-run-all --parallel devserver watch:sass",
+    "start:dev": "npm-run-all --parallel devserver watch:sass",
     "compile:sass": "node-sass sass/main.scss css/style.comp.css",
     "concat:css": "concat -o css/style.concat.css css/iconfont.css css/style.comp.css",
     "prefix:css": "postcss css/style.concat.css --use autoprefixer -o css/style.prefix.css",
     "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
-    "build:css": "npm-run-all compile:sass concat:css prefix:css compress:css"
+    "build:css": "npm-run-all compile:sass concat:css prefix:css compress:css",
+    "heroku-prebuild": "npm install --dev",
+    "start": "node server.js"
   },
   "browserslist": [
     "last 10 versions",
@@ -21,6 +23,9 @@
   "author": "Giselle Zatonyl",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "helmet": "^4.1.0",
     "live-server": "^1.2.1"
   },
   "devDependencies": {
