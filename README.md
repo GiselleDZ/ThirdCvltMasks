@@ -1,6 +1,6 @@
 # Third Cvlt Masks
 
-* This is a simple e-flyer for the fashion brand Third Cult. Visit their website at [Third Cult](http://thirdcult.com) 
+* This is a simple e-flyer for the fashion brand Third Cult. Visit their website at [Third Cult dot com](http://thirdcult.com) 
 * Currently this app is hosted on Heroku: [Third Cult Masks](https://thirdcult-masks.herokuapp.com)
 # Libraries and language
 This is a static app that uses vanilla Javascript, HTML5,  Express, CSS3 & SASS. Visit [package.json](https://github.com/GiselleDZ/ThirdCvltMasks/blob/main/package.json) for additional plugin information
