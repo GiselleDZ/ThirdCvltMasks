@@ -1,0 +1,90 @@
+///  C O L O R S
+
+//primary//
+$white: #FFFFFF;
+$black: #000000;
+
+$light-gray: #D3D3D3;
+$lightish-gray: #C0C0C0;
+$medium-light-gray: #A9A9A9;
+
+//secondary//
+$medium-gray: #808080;
+
+$dark-gray: #686868;
+$darker-gray: #505050;
+$darkester-gray: #303030;
+$darkest-gray: #181818;
+
+//tertiary//
+$whiskey-tan-light: #A97779;
+$whiskey-tan-dark: #463132;
+
+$vegetable-tan-light: #D69C6E;
+$vegetable-tan-dark: #58402e;
+
+$black-leather-light: #1B2A43;
+$black-leather-dark: #000000;
+
+// c o l o r   g r a d i e n t s
+$whiskey-tan-gradient: linear-gradient(to right bottom, 
+    $whiskey-tan-light, 
+    $whiskey-tan-dark);
+
+$whiskey-tan-gradient-transparent: linear-gradient(to right bottom,
+    rgba($whiskey-tan-light, .8),
+    rgba($whiskey-tan-dark, .8));
+
+
+$vegetable-tan-gradient: linear-gradient(to right bottom, 
+    $vegetable-tan-light, 
+    $vegetable-tan-dark);
+
+$vegetable-tan-gradient-transparent: linear-gradient(to right bottom, 
+    rgba($vegetable-tan-light, .8), 
+    rgba($vegetable-tan-dark, .8));
+
+
+$black-gradient: linear-gradient(to right bottom, 
+    $black-leather-light, 
+    $black-leather-dark);
+
+$black-gradient-transparent: linear-gradient(to right bottom, 
+    rgba($black-leather-light, .8), 
+    rgba($black-leather-dark, .8));
+
+
+//   G R I D    V A R I A B L E S
+$grid-width: 114rem;
+$gutter-vertical : 8rem;
+$gutter-vertical-small: 6rem;
+$gutter-horizontal: 6rem;
+
+
+//   F O N T    S I Z E
+$default-font-size: 1.6rem;
+
+
+// B O X   S H A D O W
+$box-shadow-small-light: 0 1rem 2rem rgba($color: #000000, $alpha: .15);
+$box-shadow-light: 0 1.5rem 4rem rgba($color: #000000, $alpha: .15);
+$box-shadow-medium: 0 1.5rem 4rem rgba($color: #000000, $alpha: .20);
+$box-shadow-dark: 0 1.5rem 4rem rgba($color: #000000, $alpha: .25);
+$box-shadow-big-dark: 0 2rem 4rem rgba($color: #000000, $alpha: .4);
+
+
+// C O M P O N E N T   V A R I A B L E S
+$card-height: 62rem;
+$card-height-tab: 100rem;
+$card-height-phone: 32rem;
+
+// S H A P E S 
+$circle50: circle(50% at 50% 50%);
+$circle40: circle(40% at 40% 40%);
+
+
+// B O R D E R    R A D I U S 
+
+$border-radius-sm: .5rem;
+$border-radius-big: 1rem;
+$border-radius-round: 10rem;

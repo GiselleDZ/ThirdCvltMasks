@@ -1,0 +1,92 @@
+.story{
+    width: 80%;
+    margin: 0 auto;
+    box-shadow: $box-shadow-medium;
+    background-color: $darkest-gray;
+    border-radius: $border-radius-sm;
+    padding: 6rem;
+    padding-left: 9rem;
+    font-size: $default-font-size;
+    transform: skewX(-12deg);
+    color: $light-gray;
+    
+    & > * {
+        transform: skewX(12deg);
+
+        @include respond(tab-port){
+            transform: skewX(0); 
+        }
+    }
+
+    
+    @include respond(tab-port){
+        width: 100%;
+        padding: 4rem;
+        padding-left: 7rem;  
+    }
+    
+    @include respond(tab-port){
+        transform: skewX(0);
+        width: 80%;
+        padding: 4rem;
+    }
+
+    &__shape{
+        width: 12rem;
+        height: 12rem;
+        float: left;
+        shape-outside: $circle50;
+        clip-path: $circle50;
+        transform: translateX(-3rem) skewX(12deg);;
+        box-shadow: $box-shadow-light;
+        position: relative;
+
+        @include respond(tab-port){
+            transform: skewX(0) translate(0); 
+            float: none;
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 3rem;
+        }
+    }
+
+    &__img{
+        width: 100%;
+        transform: scale(1.2);
+        transition: all .5s;
+        border: 1rem solid $white;
+    }
+
+    &__text{
+        transform: skewX(12deg);
+
+        @include respond(tab-port){
+            transform: skewX(0); 
+        }
+    }
+
+    &__caption{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        text-align: center;
+        color: $white;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        opacity: 0;
+        transition: .5s;
+        transition: all .5s;
+    }
+
+    &:hover &__caption{
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+
+    &:hover &__img{
+        transform: scale(1.15);
+        filter: blur(1px);
+        backface-visibility: hidden;
+    }
+}

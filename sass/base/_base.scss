@@ -1,0 +1,42 @@
+*,
+*::before,
+*::after {
+    margin: 0px;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%; 
+
+    // > 1800
+    @include respond(big-desktop){ // 1rem = 12px
+        font-size: 75%; 
+    }
+    
+    // < 1200
+    @include respond(tab-land){ // 1rem = 9 px
+        font-size: 56.25%; 
+    }
+
+    // < 900
+    @include respond(tab-port){ // 1rem = 8 px
+        font-size: 50%; 
+    }
+}
+
+body {
+    box-sizing: border-box;
+    padding: 3rem;
+
+    @include respond(tab-port){ 
+        padding: 0; 
+    }
+}
+
+::selection {
+    background-color: $black;
+    color: $white;
+}
+
+ 

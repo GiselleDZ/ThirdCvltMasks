@@ -1,0 +1,163 @@
+.card{
+
+    // F U N C T I O N A L I T Y
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+    height: $card-height;
+
+
+    // TO DO // RESTRUCTURE CARDS FOR HOVER NONE
+
+    @media only screen and (max-width: 56.25em),
+            only screen and (hover: none)  {
+            width: 45%;
+            margin: 0 auto; 
+    }
+    
+
+    @include respond(phone){
+        width: 80%;
+    }
+
+    &__side{
+        height: $card-height;
+        transition: all .8s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        backface-visibility: hidden;
+        border-radius: $border-radius-sm;
+        overflow: hidden;
+        box-shadow: $box-shadow-light;
+
+        &--front{
+            background-color: $darkester-gray;
+            height: $card-height;
+        }
+
+        &--back{
+            background-color: $medium-gray;
+            transform: rotateY(-180deg);
+            height: $card-height;
+
+            &-1{
+                background-image: $whiskey-tan-gradient;
+            }
+
+            &-2{
+                background-image: $vegetable-tan-gradient;
+            }
+
+            &-3{
+                background-image: $black-gradient;
+            }
+        }
+    }
+
+
+    &:hover &__side--front{
+        transform: rotateY(180deg);
+    }
+
+    &:hover &__side--back{
+        transform: rotateY(0);
+    }
+
+    // F R O N T   S I D E    S T Y L I N G 
+    &__image{
+        background-size: cover;
+        height: 27rem;
+        clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); 
+
+        &--1{
+            background-image: url(../thirdcvlt-imgs/mask4-crop.jpg), $whiskey-tan-gradient;
+            // background-blend-mode: hard-light;
+        }
+
+        &--2{
+            background-image: url(../thirdcvlt-imgs/mask3-crop.jpg), $vegetable-tan-gradient;
+            // background-blend-mode: luminosity;
+        }
+
+        &--3{
+            background-image: url(../thirdcvlt-imgs/mask9-crop.jpg), $black-gradient;
+        }
+    }
+
+    &__heading{
+        font-size: 2.5rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        line-height: 4rem;
+        height: 20rem;
+        position: absolute;
+        text-align: right;
+        top: 20rem;
+        color: $white;
+        right: 2rem;
+        width: 65%;
+    }
+    
+    &__heading-span{
+
+        &--1{
+            @include background-quartenary-heading($whiskey-tan-gradient-transparent);
+        }
+
+        &--2{
+            @include background-quartenary-heading($vegetable-tan-gradient-transparent);
+        }
+
+        &--3{
+            @include background-quartenary-heading($black-gradient-transparent);
+        }
+    }
+
+
+    // B A C K   S I D E    S L I  D I N G 
+    &__details{
+        padding: 3rem;
+
+        ul{
+            list-style: none;
+            width: 80%;
+            margin: 0 auto;
+
+            li{
+                padding: 1rem;
+                font-size: 1.3rem;
+                text-align: center;
+                line-height: 1.4rem;
+                color: $medium-light-gray;
+                
+                &:not(:last-child){
+                    border-bottom: .5px solid $darker-gray;
+                }
+            }
+        }
+    }
+
+    &__cta{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__price-box{
+        color: $white;
+        margin-bottom: 8rem;
+    }
+    
+    &__price-only{
+        font-size: 1.8rem;
+    }
+    
+    &__price-value{
+        font-size: 8rem;
+        line-height: 7rem;
+        font-weight: 100;
+    }
+}

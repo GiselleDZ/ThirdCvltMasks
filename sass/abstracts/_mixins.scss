@@ -1,0 +1,117 @@
+// L A Y O U T
+
+@mixin clearfix {
+    &::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+}
+
+@mixin center-axis{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+
+
+// F U N T I O N A L I T Y
+
+@mixin classy-primary-button-hover{
+    &:hover{
+        transform: translateY(-.2rem);
+        box-shadow: 0 1rem 2rem  #00000038;
+        &::after{
+            transform: scale(1.05);
+            opacity: 0;
+        }
+    }
+}
+
+
+
+
+
+
+// M E D I A    Q U E R Y     M A N A G E R
+
+// 0 - 600: PHONE
+// 600-900: TABLET PORTRAIT
+// 900-1200: LANDSCAPE TABLET
+// 1200-1800: NORMAL STYLES // desktop
+// 1800 AND OVER : BIG DESKTOP
+
+
+// breakpoint arguement choices:
+// - phone
+// - tab-port
+// - tab-land
+// - big-desktop
+
+// responsive adaptation order :
+// base > typography > general layout > grid > layout > components
+
+@mixin respond ($breakpoint) {
+
+    /// D E S K T O P   F I R S T   O R D E R -- lg > sml
+    
+    @if $breakpoint == big-desktop {
+        @media only screen and (min-width: 112.5em) { @content }; //1800px // 12px
+    }
+    
+    @if $breakpoint == tab-land {
+        @media only screen and (max-width: 75em) { @content }; // 1200px // 9px
+    }
+    
+    @if $breakpoint == tab-port {
+        @media only screen and (max-width: 56.25em) { @content }; // 900px // 8px
+    }
+
+    @if $breakpoint == phone {
+        @media only screen and (max-width: 37.5em) { @content }; // 600px // 6px
+    }
+    
+}
+
+
+
+
+
+
+
+
+// C O L O R S
+
+@mixin background-quartenary-heading($gradient){
+    box-decoration-break: clone;
+    padding: .5rem 1.5rem;
+    background-image: $gradient;
+}
+
+@mixin gradient-photo($photo){
+    background-image: linear-gradient(
+        to right bottom,
+        #000000af,
+        #222121b4),
+        $photo;
+}
+
+@mixin gradient-transparent-photo($photo){
+    background-image: linear-gradient(
+        to right bottom,
+        #706f6fd0,
+        #969595e1),
+        $photo;
+}
+
+@mixin gradient-transparent-photo-dark($photo){
+    background-image: linear-gradient(
+        to right bottom,
+        #242424e7,
+        #0f0f0fea),
+        $photo;
+}

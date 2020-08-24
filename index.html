@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/iconfont.css">
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+
+        <title>THIRD CVLT | ANONYMIZER </title>
+
+        <script>
+            function toggleNav (){
+                const checkbox = document.getElementById("navi-toggle").checked
+                console.log(checkbox)
+
+                if( document.getElementById("navi-toggle").checked === false ){
+                    document.getElementById("navi-toggle").checked = true 
+                    
+                } else {
+                    document.getElementById("navi-toggle").checked = false
+                }
+            }
+        </script>
+
+    </head> 
+    <body>
+
+
+        <!-- NAVIGATION layout element using: button ":checked" pseudo element-->
+        <!-- with hidden duplicate to expand as background on "checked"-->
+
+        <!-- NAV using a SPAN element plus their ::before and ::after pseudo props -->
+        <!-- and animated on button "checked", transform rotation plus transform origin to make cool dynamic shape -->
+
+        <div class="navigation">
+            <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+            <label for="navi-toggle" class="navigation__button"> 
+                <span class="navigation__icon">&nbsp;</span>
+            </label>
+            <div class="navigation__background">&nbsp;</div>
+            <nav class="navigation__nav">
+                <ul class="navigation__list">
+                    <li class="navigation__items">
+                        <a onClick="toggleNav()" href="#section-about" class="navigation__link"><span>01</span>About</a>
+                    </li>
+                    <li class="navigation__items">
+                        <a onClick="toggleNav()" href="#section-features" class="navigation__link"><span>02</span>Features</a>
+                    </li>
+                    <li class="navigation__items">
+                        <a onClick="toggleNav()" href="#section-masks" class="navigation__link"><span>03</span>Popular Masks</a>
+                    </li>
+                    <li class="navigation__items">
+                        <a onClick="toggleNav()" href="#section-stories" class="navigation__link"><span>04</span>Reviews</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        
+
+
+
+
+        <header class="header">
+            <div class="header__logo-box">
+                <img class="header__logo" src="./thirdcvlt-imgs/thidcvlt-mark-white.png" alt="Logo">
+            </div>
+
+            <div class="header__text-box">
+                <h1 class="heading-primary">
+                    <span class="heading-primary--main">
+                        THIRD CVLT
+                    </span>
+                    <span class="heading-primary--sub">
+                        ANONYMIZER
+                    </span>
+                </h1>
+                <a href="#section-masks" class="btn btn--white btn--animated">Discover All Mask Styles</a>
+            </div>
+        </header>
+
+
+        <main>
+
+
+
+
+
+            <!-- About page including a COMPOSITION COMPONENT to animate images and effects -->
+
+            <section class="section-about" id="section-about">
+                <div class="u-center-text u-margin-bottom-big">
+                    <h2 class="heading-secondary heading-secondary--light">
+                        Full grain leather masks with detachable 100% cotton face coverings
+                    </h2>
+                </div>
+
+                <div class="row">
+                    <div class="col-1of2 u-margin-left-medium">
+                        <p class="paragraph u-text-light-gray">
+                            Mask features bendable nose strip, 2 ply cotton fabric with pocket insert for optional filter(not included). Cloth portion of mask is washable, leather ear straps feature ring snaps and are detachable.
+                        </p>
+                        <p class="paragraph u-text-light-gray u-margin-bottom-medium">
+                            We make these masks to order by hand in our small studio in Brooklyn. Please allow 2 days for production and processing.
+                        </p>
+                        <h4 class="heading-quaternary u-margin-bottom-big">
+                            We ship 100% plastic free!
+                        </h4>
+
+                        <button class="btn-text btn-text--white" >
+                            <a href="#section-features" class="btn-text--anchor">
+                                Learn More &rarr;
+                            </a>
+                        </button>
+                    </div>
+                    <div class="col-1of2">
+                        <div class="composition">
+                            <img srcset="./thirdcvlt-imgs/mask4.jpg 600w, ./thirdcvlt-imgs/mask4-small.jpg 1200w" 
+                                alt="black on whiskey tan mask"
+                                sizes="(max-width=900px) 26vh"
+                                class="composition__photo composition__photo--p1"
+                                src="./thirdcvlt-imgs/mask4.jpg"
+                            >
+                            <img srcset="./thirdcvlt-imgs/mask1.jpg 600w, ./thirdcvlt-imgs/mask1-small.jpg 1200w" 
+                                alt="white on white mask"
+                                sizes="(max-width=900px) 26vh"
+                                class="composition__photo composition__photo--p2"
+                                src="./thirdcvlt-imgs/mask1.jpg"
+                            >
+                            <img srcset="./thirdcvlt-imgs/mask9.jpg 600w, ./thirdcvlt-imgs/mask9-small.jpg 1200w" 
+                                alt="black on black mask"
+                                sizes="(max-width=900px) 26vh"
+                                class="composition__photo composition__photo--p3"
+                                src="./thirdcvlt-imgs/mask9.jpg"
+                            >
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+
+
+            <!-- FEATURE-BOX COMPONENT - uses FONT icons included in css styles folder -->
+
+            <section class="section-features" id="section-features">
+                <div class="row">
+                    <div class="col-1of4">
+                        <div class="feature-box">
+                            <i class="feature-box__icon icon-basic-world"></i>
+                            <h3 class="heading-tertiary heading-tertiary--light u-margin-bottom-small">
+                                Ships Worldwide
+                            </h3>
+                            <p class="feature-box__text u-margin-bottom-medium">
+                                We ship our masks domestically and worldwide using insured shipping carriers including USPS, UPS, and DHL to ensure your product arrives in a safe and timely fashion.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-1of4">
+                        <div class="feature-box">
+                            <i class="feature-box__icon icon-basic-star"></i>
+                            <h3 class="heading-tertiary  heading-tertiary--light u-margin-bottom-small">
+                                One of a Kind
+                            </h3>
+                            <p class="feature-box__text">
+                                Our most common feedback is how unique our product is. We combine form and function for a face mask that is tailored and classic but also uses quality durable materials for added protection and to withstand heavy use.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-1of4">
+                        <div class="feature-box">
+                            <i class="feature-box__icon icon-basic-pencil-ruler"></i>
+                            <h3 class="heading-tertiary  heading-tertiary--light u-margin-bottom-small">
+                                Customizable
+                            </h3>
+                            <p class="feature-box__text u-margin-bottom-smallmedium">
+                                Featuring a modular design, clients can pick and choose their components from a wide swathe of fine italian leathers, hardware, and fabric color/type. Custom logo embossing is available for a one time set-up fee.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-1of4">
+                        <div class="feature-box">
+                            <i class="feature-box__icon icon-basic-hammer"></i>
+                            <h3 class="heading-tertiary  heading-tertiary--light u-margin-bottom-small">
+                                Handmade in NYC
+                            </h3>
+                            <p class="feature-box__text">
+                                All of our manufacturing is done at our studio located in the creative pulse of New York: Brooklyn, NY. By placing an order with us, you are supporting an LGBT, woman and  owned small business.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+
+
+            <!-- Composed of the CARD COMPONENT, which has a side selector, plus front and back -->
+            <!-- PERSPECTIVE property crucial for effect \\\ rotates -180deg -->
+            <!-- ADDITIONAL NOTES: clip path for image, NEED "backface-visibility: hidden" and "overflow: hidden" -->
+
+            <section class="section-masks" id="section-masks">
+                <div class="u-center-text u-margin-bottom-big">
+                    <h2 class="heading-secondary heading-secondary--lighter">
+                        Most Popular Masks
+                    </h2>
+                </div>
+                <div class="row">
+                    <div class="col-1of3">
+                        <div class="card">
+                            <div class="card__side card__side--front">
+                                <div class="card__image card__image--1">
+                                    &nbsp;
+                                </div>
+                                <h4 class="card__heading">
+                                    <span class="card__heading-span--1">
+                                        Whiskey Tan Leather
+                                    </span>
+                                </h4>
+                                <div class="card__details"> 
+                                     <ul>
+                                         <li>Horween Chromexcel Leather Strap System</li>
+                                         <li>100% tight knit jersey cotton face covering</li>
+                                         <li>Bendable nose strip</li>
+                                         <li>2 ply cotton fabric with pocket insert for optional filter</li>
+                                         <li>Cloth portion of mask is washable</li>
+                                         <li>Leather ear straps feature ring snaps and are detachable</li>
+                                     </ul>
+                                </div>
+                                
+                            </div>
+                            <div class="card__side card__side--back card__side--back-1">
+                                <div class="card__cta">
+                                    <div class="card__price-box">
+                                        <p class="card__price-only">Only</p>
+                                        <p class="card__price-value">$38</p>
+                                    </div>
+                                    <a href="https://thirdcvlt.com/products/tan-leather-face-mask" class="btn btn--white u-margin-bottom-small">Purchase</a>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-1of3">
+                        <div class="card">
+                            <div class="card__side card__side--front">
+                                <div class="card__image card__image--2">
+                                    &nbsp;
+                                </div>
+                                <h4 class="card__heading">
+                                    <span class="card__heading-span--2">
+                                        Vegetable Tan Leather
+                                    </span>
+                                </h4>
+                                <div class="card__details">
+                                    <ul>
+                                        <li>Full grain italian vachetta veg tan leather strap system</li>
+                                        <li>Lightweight airy breathable cotton linen face covering</li>
+                                        <li>Bendable nose strip</li>
+                                        <li>100% fine linen cotton fabric with pocket insert for optional</li>
+                                        <li>Cloth portion of mask is hand washable only</li>
+                                        <li>Leather ear straps feature ring snaps and are detachable</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card__side card__side--back card__side--back-2">
+                                <div class="card__cta">
+                                    <div class="card__price-box">
+                                        <p class="card__price-only">Only</p>
+                                        <p class="card__price-value">$38</p>
+                                    </div>
+                                    <a href="https://thirdcvlt.com/products/summerweight-leather-and-linen-face-mask" class="btn btn--white u-margin-bottom-small">Purchase</a>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-1of3">
+                        <div class="card">
+                            <div class="card__side card__side--front">
+                                <div class="card__image card__image--3">
+                                    &nbsp;
+                                </div>
+                                <h4 class="card__heading">
+                                    <span class="card__heading-span--3">
+                                        black Leather
+                                    </span>
+                                </h4>
+                                <div class="card__details">
+                                    <ul>
+                                        <li>Black full grain italian leather strap system</li>
+                                        <li>100% tight knit jersey cotton face covering</li>
+                                        <li>Bendable nose strip</li>
+                                        <li>2 ply cotton fabric with pocket insert for optional filter</li>
+                                        <li>Cloth portion of mask is washable</li>
+                                        <li>Leather ear straps feature ring snaps and are detachable</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card__side card__side--back card__side--back-3">
+                                <div class="card__cta">
+                                    <div class="card__price-box">
+                                        <p class="card__price-only">Only</p>
+                                        <p class="card__price-value">$38</p>
+                                    </div>
+                                    <a href="https://thirdcvlt.com/products/black-leather-face-mask" class="btn btn--white u-margin-bottom-small">Purchase</a>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="u-center-text">
+                    <a href="https://thirdcvlt.com/" class="btn btn--black-button btn--animated">
+                        View All Masks
+                    </a>
+                </div>
+            </section>
+
+
+
+
+            <!-- Reviews page using HTML5 VIDEO TAG, with property modifiers "autoplay", "playbackRate", "muted" and "loop" -->
+            <!-- The STORY "review" COMPONENTS are skewed at STORY component level, and UNSKEWED by selecting direct children -->
+            <!-- PLUS the HTML5 "FIGURE" tag and "shape" class, as well as the "text"-->
+
+            <section class="section-stories" id="section-stories">
+                <div class="bg-video">
+                    <video class="bg-video__content" playbackRate="1" autoplay muted loop>
+                        <source src="./thirdcvlt-imgs/ThirdCvlt-MazeVid.mp4" type="video/mp4">
+                        <source src="./thirdcvlt-imgs/ThirdCvlt-MazeVid.webm" type="video/webm">
+                            ~~ Your browser is not supported ~~
+                    </video>
+                </div>
+                <div class="row">
+                    <div class="story">
+                        <figure class="story__shape">
+                            <img src="./thirdcvlt-imgs/hs-mask.png" alt="H S wearing mask" class="story__img">
+                            <figcaption class="story__caption">
+                                H S
+                            </figcaption>
+                        </figure>
+                        <div class="story-text">
+                            <h3 class="heading-tertiary heading-tertiary--light u-margin-bottom-small">
+                                Perfect
+                            </h3>
+                            <p class="paragraph u-margin-bottom-big">
+                                Comfortable and light on the face- even after 6 hours. Very happy, Thank you!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="story">
+                        <figure class="story__shape">
+                            <img src="./thirdcvlt-imgs/VikingrChristianwmask.png" alt="Vikingr Christian wearing mask" class="story__img">
+                            <figcaption class="story__caption">
+                                Vikingr Christian
+                            </figcaption>
+                        </figure>
+                        <div class="story-text">
+                            <h3 class="heading-tertiary heading-tertiary--light u-margin-bottom-small">
+                                These masks are phenomenal, I get compliments every day.
+                            </h3>
+                            <p class="paragraph u-margin-bottom-small ">
+                                I ended up snagging two for myself, one for my wife, and quite a few of my friends all ordered after sharing the listing. 
+                            </p> 
+                            <p class="paragraph u-margin-bottom-small">
+                                I’ll keep buying these.
+                            </p> 
+                            <p class="paragraph u-margin-bottom-small">I’d love to be able to buy other colors of leather without the mask, and would love to see other colors for the masks (brown, burgundy, olive, navy, etc...) become available so I can mix and match leathers/colors down the road.</p>
+                            <p class="paragraph u-margin-bottom-small">If you sweat profusely, like I do at work or at the gym; make sure you hand wash your mask frequently. Make sure you clean and oil the snaps with a q-tip as well, because they WILL rust. Treat the leather as normal, apply a leather conditioner every so often to keep the leather supple.</p>
+                            <p class="paragraph u-margin-bottom-small">Highly recommended seller with very prompt shipping, you can’t go wrong with thirdcvlt.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="story">
+                        <figure class="story__shape">
+                            <img src="./thirdcvlt-imgs/Jovanka-mask.png" alt="Jovanka wearing mask" class="story__img">
+                            <figcaption class="story__caption">
+                                Jovanka J
+                            </figcaption>
+                        </figure>
+                        <div class="story-text">
+                            <h3 class="heading-tertiary heading-tertiary--light u-margin-bottom-small">
+                                I'm in love with this MASK!
+                            </h3>
+                            <p class="paragraph u-margin-bottom-small">
+                                I can smell the leather... mmmhmm9
+                            </p>
+                            <p class="paragraph u-margin-bottom-small">Quality leather ear straps with adjustable mask snaps, breathable and passed the lighter test! Shipping was fast af! It even came with its own little carrying pouch, complete with leather label! (It has a pocket pouch for filters and a solid nose thing) </p>
+                            <p class="paragraph u-margin-bottom-small">I'm definitely going to purchase a couple more!! :) THANK YOU!!! 🙌🏼🖤🖤🖤🖤🖤🖤🖤🖤🖤🖤</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <button class="btn-text btn-text--white u-margin-left-bigger" >
+                        <a href="https://www.etsy.com/shop/THIRDCVLT?ref=condensed_trust_header_title_sold#reviews" class="btn-text--anchor">
+                            Read All Reviews &rarr;
+                        </a>
+                    </button>
+                </div>
+            </section>
+
+
+
+
+            <!-- Wholesale page using a FORM COMPONENT, with "text", "email" and "textarea" TYPES -->
+            <!-- Also using CUSTOM radio buttons in the FORM COMPONENT, using the "checked" pseudo property -->
+            <!-- and selecting immediate children for transformation with "~" -->
+
+            <!-- <section class="section-wholesale" id="section-wholesale">
+                <div class="row">
+                    <div class="inquiry">
+                        <div class="inquiry__form">
+                            <form action="#" class="form">
+                                <h2 class="heading-secondary heading-secondary--lighter u-margin-bottom-medium">
+                                    Inquire about our wholesale pricing
+                                </h2>
+                                <div class="form__group">
+                                    <input type="text" class="form__input" placeholder="Full Name" required>
+                                    <label for="name" class="form__label">Full Name</label>
+                                </div>
+                                <div class="form__group">
+                                    <input type="email" class="form__input" placeholder="Email Address" required>
+                                    <label for="email" class="form__label">Email Address</label>
+                                </div>
+                                <div class="form__group">
+                                    <textarea type="textarea" class="form__input form__input--msg" placeholder="Message"></textarea>
+                                    <label for="message" class="form__label">Attach a message to your inquiry</label>
+                                </div>
+                                <div class="form__group u-margin-top-medium-large u-margin-bottom-small">
+                                    <button class="btn-text btn-text--white">
+                                        Next Step &rarr;
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section> -->
+
+        </main>
+
+
+
+        
+
+        <!-- Footer LAYOUT ELEMENT using an unordered list for navigation ///  and copyright disclaimer -->
+
+        <footer class="footer">
+            <div class="footer__logo-box">
+
+                <picture class="footer__logo">
+                    <source srcset="./thirdcvlt-imgs/thidcvlt-logoandmark-150-white.png 1x, ./thirdcvlt-imgs/thidcvlt-logoandmark-300-white.png 2x" media="(max-width: 37.5rem)">
+                    <img srcset="./thirdcvlt-imgs/thidcvlt-logoandmark-150-white.png 1x, ./thirdcvlt-imgs/thidcvlt-logoandmark-300-white.png 2x" alt="logo">
+                </picture>
+            </div>
+            <div class="row">
+                <div class="footer__line-nav"></div>
+                <div class="footer__navigation">
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <a href="https://thirdcvlt.com/"  class="footer__link">
+                                Company
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="https://thirdcvlt.com/pages/about"   class="footer__link">
+                                About
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="https://thirdcvlt.com/pages/c-o-n-t-a-c-t" class="footer__link">
+                                Contact
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="https://www.etsy.com/shop/THIRDCVLT"  class="footer__link">
+                                Etsy
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="https://www.instagram.com/thirdcvlt/"  class="footer__link">
+                                Instagram
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__copyright">
+                    <div class="footer__item"><a href="http://www.dev.gisellezatonyl.com"  class="footer__link u-text-small">Built by Giselle Zatonyl</a></div>
+                    <div class="footer__item"><a href="https://thirdcvlt.com/" class="footer__link u-text-small">for Third Cvlt</a></div> 
+                </div>
+            </div>
+        </footer>
+
+
+
+
+
+
+        <!-- POPUP COMPONENT using table and table cell properties for layout. Plus vertical aligns, and hyphens -->
+
+        <div class="popup" id="popup">
+            <div class="popup__content">
+                <div class="popup__left">
+                    <img src="./thirdcvlt-imgs/mask1.jpg" alt="white mask on white mask, atop grey whethered wood" class="popup__left--img">
+                    <img src="./thirdcvlt-imgs/mask8.jpg" alt="black on black mask, atop grey whethered wood" class=" popup__left--img">
+                </div>
+                <div class="popup__right">
+                    <a href="#section-masks" class="popup__close">&times;</a>
+                    <h2 class="heading-secondary heading-secondary--light u-margin-bottom-smallmedium">
+                        Find out more about Thirdcvlt wholesale
+                    </h2>
+                    <h3 class="heading-tertiary u-margin-bottom-small">
+                        Wholesale
+                    </h3>
+                    <p class="popup__text u-margin-bottom-medium">
+                        You can find out more about wholesale by reaching out to stella@thirdcvlt.com
+                    </p>
+                    <button class="btn btn--white">a good cta</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

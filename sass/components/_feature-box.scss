@@ -1,0 +1,44 @@
+.feature-box{
+    text-align: center;
+    height: 32rem;
+    padding: 2rem;
+    background-color: rgba($color: $darkest-gray, $alpha: 0.95);
+    font-size: 1.3rem;
+    padding: 2.5rem;
+    border-radius: $border-radius-sm;
+    box-shadow: $box-shadow-medium;
+    transition: transform .5s;
+
+    @include respond(tab-port){
+        height: 26rem;
+        padding: 6rem;
+    }
+
+    @include respond(phone){
+        width: 80%;
+        height: 28rem;
+        padding: 4rem;
+        margin: 0 auto;
+        
+    }
+
+    &__icon{
+        font-size: 3rem;
+        display: inline-block;
+        background-image: linear-gradient( to right, $medium-gray, $light-gray);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
+    &:hover{
+        transform: translateY(-1.5rem) scale(1.03);
+
+    }
+
+
+    &__text{
+        color: $medium-light-gray;
+        font-weight: 300;
+    }
+
+}
